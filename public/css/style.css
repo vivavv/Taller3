@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/*****/
+
+
+/* Index */
+
+#home {
+    margin: 0;
+    padding: 0;
+    background: url('../img/architecture.jpg') no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+
+#home .container {
+    margin-top: 35vh;
+}
+
+#home h1 {
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+#home h2 {
+    font-size: 2rem;
+}
+
+
+/* Lista de Propiedades */
+
+@font-face {
+    font-family: Pacifico;
+    src: url('../font/Pacifico-Regular.ttf');
+}
+
+@font-face {
+    font-family: Source Sans Pro;
+    src: url('../font/OpenSans-Regular.ttf');
+}
+
+#lista {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 5;
+}
+
+.properties {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 6% 2%;
+}
+
+.pic-grid {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.pic-grid:after {
+    clear: both;
+}
+
+.pic-grid:after,
+.pic-box:before {
+    content: '';
+    display: table;
+}
+
+.pic-grid li {
+    width: 328px;
+    height: 328px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.pic-grid li {
+    width: 328px;
+    height: 328px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.pic-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-transition: 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out, ;
+}
+
+.pic-box:hover {
+    transform: scale(1.05);
+}
+
+.img-1 {
+    background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), /* bottom, image */
+    url('../img/menorca.jpg');
+}
+
+.img-2 {
+    background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), /* bottom, image */
+    url('../img/propiedad1.jpg');
+}
+
+.img-3 {
+    background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), /* bottom, image */
+    url('../img/propiedad2.jpg');
+}
+
+.img-4 {
+    background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), /* bottom, image */
+    url('../img/propiedad3.jpg');
+}
+
+.pic-info {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+.overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pic-info h3 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    color: #ADD8E6;
+    font-size: 42px;
+    margin: 0 30px;
+    padding: 100px 0 0 0;
+    line-height: 1.5;
+}
+
+.pic-info p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: antiquewhite;
+    padding: 4px 5px;
+    margin: 0 30px;
+    font-size: 16px;
+    line-height: 2;
+}
+
+
+/* Ingresar Propiedades */
+
+@font-face {
+    font-family: Roboto;
+    src: url('../font/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: Work Sans;
+    src: url('../font/WorkSans-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.name {
+    color: #485e74;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 208%;
+    max-width: 1170px;
+    margin-left: auto;
+}
+
+.body-form {
+    color: #485e74;
+    line-height: 1.6;
+    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    padding: 3em;
+}
+
+.dropdown-form {
+    color: #485e74;
+    font-family: 'Roboto', sans-serif;
+    padding: 1em;
+    border: 1px solid #c9e6ff;
+    width: 100%;
+    max-width: 1170px;
+}
+
+.contain {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    z-index: 5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+    margin-top: 3em;
+}
+
+.wrapper>* {
+    padding: 1em;
+}
+
+.sidebar-info {
+    background: #4682B4;
+}
+
+.color-side {
+    color: #ADD8E6;
+}
+
+.margin-side {
+    margin-top: 1rem;
+}
+
+.sidebar-info h3,
+.sidebar-info ul {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.house-info {
+    background: #d8ecf3;
+}
+
+
+/* Form Styles */
+
+.house-info form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.house-info form label {
+    display: block;
+}
+
+.house-info form p {
+    margin: 0;
+}
+
+.house-info form .full {
+    grid-column: 1 / 3;
+}
+
+.house-info form button,
+.house-info form input,
+.house-info form textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #c9e6ff;
+}
+
+.house-info form button {
+    background: #04B404;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.house-info form button:hover,
+.house-info form button:focus {
+    color: #fff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+textarea {
+    resize: none;
+}
+
+
+/*****/
+
+
+/* Section */
+
+.section {
+    padding: 2rem 0;
+}
+
+.section-head {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.section h3 {
+    font-size: 2rem;
+}
+
+section#bottomsection {
+    background: url(../img/valencia.jpg) no-repeat bottom/cover;
+    padding: 10rem 0;
+}
+
+
+/* Footer */
+
+footer .footer-cols {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem;
+    text-align: left;
+    font-size: 14px;
+}
+
+footer .footer-cols ul {
+    list-style: none;
+}
+
+footer .footer-cols ul li:first-child {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: #444 solid 1px;
+    margin-bottom: 1rem;
+}
+
+footer .footer-bottom {
+    background: #333;
+    padding: 1rem;
+}
+
+
+/* CSS Variables */
+
+:root {
+    --primary-color: #81a1ca;
+    --primary-color-hover: #8db0f2;
+    --secondary-color: #4169E1;
+    --secondary-color-hover: #6585e7;
+    --light-color: #f4f4f4;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #252529;
+    margin: 0;
+    color: antiquewhite;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+
+/* Aux Classes */
+
+.container {
+    max-width: 1180px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.lead {
+    font-size: 1.3rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.aux {
+    margin-top: auto;
+}
+
+
+/* Buttons */
+
+.btn {
+    padding: 1rem;
+    color: #fff;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background: var(--primary-color-hover);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-color-hover);
+}
+
+.button {
+    display: inline-block;
+    border: 3px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: #4682B4;
+}
+
+
+/* Text colors */
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-light {
+    color: var(--light-color);
+}
+
+.bg-light {
+    background: var(--light-color);
+    color: #333;
+}
+
+.text-second {
+    color: mintcream;
+}
+
+.text-third {
+    color: mediumslateblue;
+}
+
+
+/* Navigation */
+
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: #333;
+    color: #eee;
+    position: fixed;
+    z-index: 5;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+nav a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #eee;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: #444;
+}
+
+nav a#openup {
+    display: none;
+}
+
+
+/* Responsive Dropdown Menu */
+
+.dropdown-btn li a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 18px 22px;
+    text-decoration: none;
+}
+
+.dropdown-btn li a:hover,
+.drop:hover {
+    background-color: #f5f5f5;
+    color: #252529;
+}
+
+.drop li {
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f5f5f5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-menu a:hover {
+    background-color: #3d3e43;
+    color: #fff;
+}
+
+.drop:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 580px) {
+    .hide-on-small {
+        display: none;
+    }
+    #home {
+        height: 50vh;
+    }
+    #home .container {
+        margin-top: 15vh;
+    }
+    #home h1 {
+        font-size: 3rem;
+    }
+    #home h2 {
+        font-size: 1.5rem;
+    }
+    nav {
+        height: auto;
+        border-bottom: 0;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    nav li {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        background: #333;
+        border-bottom: 1px solid #555;
+    }
+    nav a:hover {
+        background: #444;
+    }
+    nav a#openup:after {
+        transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-90deg);
+        /* Safari and Chrome */
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        top: 20px;
+    }
+    nav a#openup {
+        display: block;
+        background-color: #333;
+        width: 100%;
+        position: relative;
+    }
+}
+
+.cf:before,
+.cf:after {
+    content: '';
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+@media screen and (max-width: 780px) {
+    footer .footer-cols {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 580px) {
+    #home p.lead {
+        display: none;
+    }
+}
+
+@media(min-width:700px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .wrapper>* {
+        padding: 2em;
+    }
+    .sidebar-info h3,
+    .sidebar-info ul,
+    .brand {
+        text-align: left;
+    }
+}
